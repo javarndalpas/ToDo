@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo List</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <div class="container">
+        <div class="todo_app">
+            <h2>ToDo List <span><img src="/images/todo_list.jpg" alt=""></span></h2>
+            <div class="row">
+                <input type="text" placeholder="Enter Task Name" id="input_box">
+
+                <select name="Priority" id="priority" >
+                    <option value="">--Please Select Level--</option>
+                   
+                    <option value="easy">Easy</option>
+                    <option value="medium">Medium</option>
+                    <option value="hard">Hard</option>
+
+                </select>
+                <button id="input_box_btn" onclick="AddTask()">Add</button>
+            </div>
+            <div class="status_container">
+                <div class="statusSelect_div">
+                <select id="statusSelect" onchange="sortFilter()">
+                    <option value="">Sort By Status</option>
+                    <option value="complete">Complete</option>
+                    <option value="incomplete">Incomplete</option>
+                </select>
+            </div>
+                <div class="prioritySelect_class">
+                    <select id="prioritySelect">
+                        <option value="">Sort By Priority</option>
+                        <option value="complete">High</option>
+                        <option value="complete">Medium</option>
+                        <option value="incomplete">Easy</option>
+                    </select>
+                </div>
+
+            </div>
+        </div>
+        <table class="table_class">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>S.No</th>
+                    <th>Name</th>
+                    <th>Priority</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="task_table">
+                <!-- <tr>
+                    <td>1.</td>
+                    <td id="task_name"></td>
+                    <td>v</td>
+                    <td>v</td>
+                    <td>
+                        <span class="btn_edit">Edit</span> 
+                        <span class="btn_danger">Delete</span> 
+                    </td>
+                </tr>  -->
+            </tbody>
+        </table>
+        
+        
+          
+    </div>
+
+</body>
+
+</html>
+<script src="./index.js"></script>
